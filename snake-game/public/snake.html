@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0d1117" />
+  <title>Snake</title>
+  <link rel="stylesheet" href="/snake.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hud">
+      <h1 class="title">SNAKE</h1>
+      <div class="scores">
+        <div class="score-box">
+          <span class="score-label">Score</span>
+          <span class="score-value" id="score">0</span>
+        </div>
+        <div class="score-box">
+          <span class="score-label">Best</span>
+          <span class="score-value" id="high-score">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="board-shell">
+      <canvas id="board" width="480" height="480" aria-label="Snake game board" role="img"></canvas>
+
+      <div class="overlay" id="overlay">
+        <p class="overlay-title" id="overlay-title">Ready?</p>
+        <p class="overlay-sub" id="overlay-sub">Press any arrow key or tap Start</p>
+        <button class="btn" id="start-btn" type="button">Start Game</button>
+      </div>
+    </div>
+
+    <footer class="controls">
+      <p class="hint">Arrow keys / WASD to move &middot; Space to pause &middot; Swipe on mobile</p>
+      <div class="dpad" aria-label="Direction controls">
+        <button class="dpad-btn up" data-dir="up" type="button" aria-label="Move up">&#9650;</button>
+        <button class="dpad-btn left" data-dir="left" type="button" aria-label="Move left">&#9664;</button>
+        <button class="dpad-btn down" data-dir="down" type="button" aria-label="Move down">&#9660;</button>
+        <button class="dpad-btn right" data-dir="right" type="button" aria-label="Move right">&#9654;</button>
+      </div>
+    </footer>
+  </main>
+
+  <script src="/snake.js"></script>
+</body>
+</html>
